@@ -1,0 +1,22 @@
+# Multiplication Table Generator
+
+def generate_table(number, up_to):
+    print(f"\nMultiplication Table for {number} up to {up_to}:")
+    for i in range(1, up_to + 1):
+        print(f"{number} x {i} = {number * i}")
+    print("-" * 25)
+
+def main():
+    while True:
+        number = int(input("Enter the number for which you want the multiplication table: "))
+        up_to = int(input("Enter the range up to which the table should be generated: "))
+        
+        generate_table(number, up_to)
+        
+        another = input("Do you want to generate another table? (yes/no): ").strip().lower()
+        if another != 'yes':
+            print("Thank you for using the Multiplication Table Generator!")
+            break
+
+if __name__ == "__main__":
+    main()
